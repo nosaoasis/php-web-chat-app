@@ -1,8 +1,6 @@
 <?php 
   $conn = mysqli_connect("localhost", "root", "", "chat");
-  if ($conn){
-    echo "Database connected";
-  } else {
-    echo "Error" . $conn->connect_error;
+  if (!$conn){
+    echo "Database not connected" . mysqli_connect_error();
   }
 ?>
